@@ -1,0 +1,55 @@
+/* Apply flexbox to the body for centering content */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9; /* Light background color */
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Full height of the viewport */
+  display: flex; /* Apply flexbox */
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  text-align: center; /* Center text content */
+  color: #333; /* Dark text color */
+}
+
+/* Style the header (h1) */
+h1 {
+  color: #007bff; /* Bright blue color for headings */
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+/* Style paragraphs */
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #666; /* Slightly lighter text for paragraphs */
+  margin: 10px 0;
+}
+
+/* Add margin and styling to links */
+a {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #28a745; /* Green color for links */
+  background-color: #e9f5ee; /* Light green background for the link button */
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+a:hover {
+  background-color: #c3e6cb; /* Darker green on hover */
+  text-decoration: none;
+}
+
+/* Style images */
+img {
+  max-width: 80%;
+  height: auto;
+  margin: 20px 10px;
+  border-radius: 10px; /* Round the edges of the image */
+  box-shadow: 0px 4px 10px rgba(145, 95, 7, 0.608); /* Add a subtle shadow */
+}
