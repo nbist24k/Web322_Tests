@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>WEB API AJAX Example</title>
+  </head>
+  <body>
+    <h1>Product Catalog</h1>
+    <button id="loadDataBtn">Load All Data</button>
+    <ul id="dataList"></ul>
+
+    <div class="search-container">
+      <input type="number" id="dataIdInput" placeholder="Enter ID" />
+      <button id="loadDataByIdBtn">Search</button>
+    </div>
+    <div id="singleData"></div>
+
+    <script>
+      document.getElementById("loadDataBtn").addEventListener("click", () => {
+        fetch("/api/data")
+          .then((response) => response.json())
+          .then((data) => {
+            const dataList = document.getElementById("dataList");
+            dataList.innerHTML = "";
+            data.forEach((item) => {
+              const li = document.createElement("li");
+              li.textContent = `ID: ${item.id}, Name: ${item.name}, Price: $${item.price}`;
+              dataList.appendChild(li);
+            });
+          })
+          .catch((error) => {
+            console.error("Error loading data:", error);
+          });
+      });
+
+      document
+        .getElementById("loadDataByIdBtn")
+        .addEventListener("click", () => {
+          const id = document.getElementById("dataIdInput").value;
+          fetch(`/api/data/${id}`)
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error("Data not found");
+              }
+              return response.json();
+            })
+            .then((data) => {
+              document.getElementById(
+                "singleData"
+              ).textContent = `ID: ${data.id}, Name: ${data.name}, Price: $${data.price}`;
+            })
+            .catch((error) => {
+              document.getElementById("singleData").textContent = error.message;
+            });
+        });
+    </script>
+  </body>
+</html>
