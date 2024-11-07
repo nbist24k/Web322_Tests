@@ -5,11 +5,10 @@ This repository contains my test solutions for WEB322 (Web Programming Tools and
 ## Structure
 
 ```
-tests/
-├── test1/
-├── test2/
-├── test3/
-└── test4/
+├── Test1/
+├── Test2/
+├── Test3/
+└── Test4/
 ```
 
 ## Important Notes
