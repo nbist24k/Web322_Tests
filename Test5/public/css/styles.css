@@ -1,0 +1,81 @@
+/* Custom styles */
+.recipe-container {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.recipe-form {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-list {
+  margin-top: 40px;
+}
+
+.recipe-item {
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: transform 0.2s;
+}
+
+.recipe-item:hover {
+  transform: translateY(-2px);
+}
+
+.recipe-header {
+  background-color: #f1f8ff;
+  padding: 15px;
+  border-radius: 8px 8px 0 0;
+}
+
+.recipe-content {
+  padding: 20px;
+}
+
+.recipe-actions {
+  padding: 15px;
+  border-top: 1px solid #eee;
+}
+
+.difficulty-badge {
+  font-size: 0.9em;
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+
+.difficulty-easy {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.difficulty-medium {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.difficulty-hard {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.cooking-time {
+  font-size: 0.9em;
+  color: #6c757d;
+}
+
+.form-label {
+  font-weight: 500;
+}
+
+.required::after {
+  content: "*";
+  color: red;
+  margin-left: 4px;
+}
